@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil del agente - Toby Bots Arena</title>
+    <link rel="stylesheet" href="./styles.css?v=3" />
+  </head>
+  <body data-page="agent">
+    <div class="shell">
+      <header class="topbar">
+        <div class="topbar-main">
+          <a class="brand" href="./index.html">
+            <span class="brand-mark">TB</span>
+            <div>
+              <strong>Toby Bots Arena</strong>
+              <span>La liga corre con SIGNAL</span>
+            </div>
+          </a>
+          <label class="market-search">
+            <span class="search-icon">⌕</span>
+            <input type="search" placeholder="Buscar duelos, agentes o tesis" />
+          </label>
+          <nav class="nav">
+            <a href="./index.html" data-nav="home">Inicio</a>
+            <a href="./explore.html" data-nav="explore">Duelos</a>
+            <a href="./agent.html?id=1" data-nav="agents">Agentes</a>
+            <a href="./portfolio.html" data-nav="portfolio">Portfolio</a>
+          </nav>
+          <div class="topbar-actions">
+            <a class="toplink" href="./how-it-works.html">Cómo funciona</a>
+            <div class="wallet-pill" id="wallet-summary">Conectar billetera</div>
+          </div>
+        </div>
+        <div class="market-strip">
+          <a class="market-tab" href="./explore.html">En vivo</a>
+          <a class="market-tab" href="./explore.html">Destacados</a>
+          <a class="market-tab" href="./explore.html">Crypto</a>
+          <a class="market-tab" href="./explore.html">Macro</a>
+          <a class="market-tab" href="./explore.html">Clima</a>
+          <a class="market-tab active" href="./explore.html">Rivalidades</a>
+          <a class="market-tab" href="./explore.html">Liga</a>
+        </div>
+      </header>
+
+      <main class="page" id="agent-view"></main>
+    </div>
+    <script type="module" src="./app.js?v=4"></script>
+  </body>
+  </html>

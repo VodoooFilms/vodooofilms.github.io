@@ -1,0 +1,1034 @@
+:root {
+  --bg: #0c1016;
+  --bg-alt: #131923;
+  --surface: #171f29;
+  --surface-2: #1b2430;
+  --surface-3: #202b38;
+  --surface-soft: rgba(28, 37, 49, 0.76);
+  --line: rgba(255, 255, 255, 0.07);
+  --line-strong: rgba(255, 255, 255, 0.11);
+  --text: #edf2f7;
+  --muted: #95a2b4;
+  --muted-2: #6e7a8d;
+  --accent: #2096ff;
+  --accent-soft: rgba(32, 150, 255, 0.14);
+  --success: #31c776;
+  --success-soft: rgba(49, 199, 118, 0.18);
+  --danger: #e45959;
+  --danger-soft: rgba(228, 89, 89, 0.18);
+  --warning: #f1b84c;
+  --warning-soft: rgba(241, 184, 76, 0.18);
+  --shadow: 0 18px 48px rgba(0, 0, 0, 0.34);
+  --radius-xl: 22px;
+  --radius-lg: 18px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(32, 150, 255, 0.12), transparent 24rem),
+    radial-gradient(circle at top right, rgba(49, 199, 118, 0.09), transparent 26rem),
+    linear-gradient(180deg, #0d1117 0%, #0b1016 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.shell {
+  width: min(1480px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 20px 0 48px;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  margin-bottom: 24px;
+  background: rgba(11, 16, 22, 0.86);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+}
+
+.topbar-main,
+.market-strip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+}
+
+.topbar-main {
+  min-height: 76px;
+}
+
+.market-strip {
+  overflow-x: auto;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: max-content;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fafcff, #9cb8d4);
+  color: #0f1720;
+  font-family: "Arial Narrow", "Avenir Next Condensed", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.brand strong,
+.brand span,
+.nav a,
+.wallet-pill,
+.button,
+button,
+select,
+input,
+.badge,
+.status-pill,
+.metric-label,
+.position-status,
+.eyebrow,
+.market-tab,
+.toplink,
+.topic-tab {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+}
+
+.brand strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.brand span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.market-search {
+  flex: 1 1 360px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 220px;
+  padding: 0 14px;
+  height: 48px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.search-icon {
+  color: var(--muted-2);
+  font-size: 1rem;
+}
+
+.market-search input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
+  padding: 0;
+}
+
+.market-search input::placeholder {
+  color: var(--muted-2);
+}
+
+.nav,
+.topbar-actions,
+.hero-actions,
+.card-meta,
+.card-footer,
+.stats-row,
+.activity-row,
+.detail-bots,
+.portfolio-summary,
+.position-row,
+.detail-duel-meta,
+.action-summary,
+.duel-split,
+.market-pulse,
+.outcome-row,
+.intro-ticks,
+.topic-tabs,
+.tabs {
+  display: flex;
+  gap: 12px;
+}
+
+.nav {
+  flex-wrap: wrap;
+}
+
+.nav a,
+.market-tab,
+.topic-tab,
+.toplink {
+  color: var(--muted);
+  font-size: 0.93rem;
+  white-space: nowrap;
+}
+
+.nav a {
+  padding: 10px 12px;
+  border-radius: 999px;
+}
+
+.nav a.active,
+.nav a:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.topbar-actions {
+  align-items: center;
+  margin-left: auto;
+}
+
+.toplink {
+  color: var(--accent);
+}
+
+.wallet-pill {
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: #b7dcff;
+  border: 1px solid rgba(32, 150, 255, 0.18);
+  font-size: 0.86rem;
+  white-space: nowrap;
+}
+
+.market-tab,
+.topic-tab {
+  padding: 9px 12px;
+  border-radius: 11px;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.market-tab.active,
+.topic-tab.active {
+  background: var(--accent-soft);
+  border-color: rgba(32, 150, 255, 0.2);
+  color: #d5ebff;
+}
+
+.page {
+  display: grid;
+  gap: 24px;
+}
+
+.panel,
+.duel-card,
+.agent-card,
+.summary-card,
+.featured-card {
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  padding: 24px;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1.25fr) minmax(360px, 0.9fr);
+}
+
+.hero-copy h1,
+.page-intro h1 {
+  margin: 0 0 10px;
+  font-family: "Arial Narrow", "Avenir Next Condensed", sans-serif;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+}
+
+.hero-copy p,
+.page-intro p,
+.duel-card p,
+.agent-card p,
+.featured-card p,
+.activity-row span:last-child,
+.metric-copy,
+.portfolio-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.hero-copy {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+.hero-actions {
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 12px;
+  padding: 12px 16px;
+  border: 1px solid transparent;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.button.primary {
+  background: var(--accent);
+  color: #f7fbff;
+}
+
+.button.secondary {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  border-color: var(--line);
+}
+
+.hero-pills,
+.card-matchup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-board {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  border: 1px solid var(--line);
+}
+
+.market-pulse {
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.pulse-stack {
+  display: grid;
+  gap: 4px;
+}
+
+.pulse-stack strong {
+  font-size: 1.55rem;
+}
+
+.mini-board {
+  display: grid;
+  gap: 12px;
+}
+
+.mini-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+
+.mini-row strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.mini-row span {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.section {
+  display: grid;
+  gap: 14px;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.section-head h2 {
+  margin: 0;
+  font-family: "Arial Narrow", "Avenir Next Condensed", sans-serif;
+  font-size: 1.65rem;
+  letter-spacing: -0.02em;
+}
+
+.section-head a {
+  color: var(--accent);
+  font-size: 0.92rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 16px;
+}
+
+.duel-card,
+.agent-card,
+.summary-card,
+.featured-card,
+.activity-list,
+.portfolio-card,
+.detail-section,
+.action-panel,
+.page-intro,
+.filters,
+.matchup-hero {
+  padding: 18px;
+}
+
+.duel-card,
+.agent-card {
+  border-radius: var(--radius-lg);
+}
+
+.duel-card {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-height: 100%;
+}
+
+.card-meta,
+.card-footer,
+.stats-row,
+.activity-row,
+.outcome-row {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-pill,
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.status-open,
+.position-active {
+  background: var(--accent-soft);
+  color: #cfe7ff;
+}
+
+.status-settled,
+.position-claimed,
+.position-won {
+  background: var(--success-soft);
+  color: #bdf0d2;
+}
+
+.status-refund,
+.position-refund {
+  background: var(--warning-soft);
+  color: #ffe4ab;
+}
+
+.position-lost {
+  background: var(--danger-soft);
+  color: #ffbdbd;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+}
+
+.duel-card h3,
+.agent-card h3,
+.featured-card h3,
+.action-panel h3,
+.portfolio-card h3,
+.detail-section h3,
+.portfolio-card h2,
+.detail-section h2 {
+  margin: 10px 0;
+  font-family: "Arial Narrow", "Avenir Next Condensed", sans-serif;
+  font-size: 1.36rem;
+  line-height: 1.22;
+}
+
+.duel-card h3 {
+  min-height: 2.44em;
+}
+
+.duel-bots,
+.versus,
+.choice-grid,
+.duel-column,
+.detail-stack,
+.activity-list,
+.steps-grid,
+.metric-grid,
+.summary-grid,
+.positions-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.duel-bots {
+  grid-template-columns: 1fr 1fr;
+  margin: 14px 0 8px;
+}
+
+.bot-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bot-line > div {
+  min-width: 0;
+}
+
+.bot-line strong,
+.bot-line .metric-label {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(32, 150, 255, 0.2), rgba(49, 199, 118, 0.16));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.avatar.large {
+  width: 62px;
+  height: 62px;
+  font-size: 1.25rem;
+}
+
+.metric-label,
+.summary-line span:first-child {
+  color: var(--muted-2);
+  font-size: 0.8rem;
+}
+
+.outcome-book {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 10px;
+}
+
+.outcome-row {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+}
+
+.trade-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 12px 0 10px;
+}
+
+.trade-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.trade-button.yes {
+  background: rgba(49, 199, 118, 0.18);
+  border: 1px solid rgba(49, 199, 118, 0.2);
+  color: #8bf0b7;
+}
+
+.trade-button.no {
+  background: rgba(228, 89, 89, 0.16);
+  border: 1px solid rgba(228, 89, 89, 0.16);
+  color: #ffaaaa;
+}
+
+.card-footer {
+  padding-top: 2px;
+  margin-top: auto;
+}
+
+.split-bar {
+  height: 8px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 10px 0 6px;
+}
+
+.split-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #31c776, #2096ff);
+}
+
+.duel-split {
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.duel-card p {
+  overflow-wrap: anywhere;
+}
+
+.steps-grid,
+.metric-grid,
+.summary-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.steps-grid article,
+.summary-card {
+  padding: 14px;
+  border-radius: 16px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+
+.steps-grid span {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-soft);
+  color: #cfe7ff;
+  font-weight: 700;
+}
+
+.steps-grid h3 {
+  margin: 10px 0 6px;
+  font-size: 1rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.compact-intro,
+.market-toolbar {
+  display: grid;
+  gap: 14px;
+}
+
+.market-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.overview-card strong {
+  display: block;
+  margin: 6px 0 4px;
+  font-family: "Arial Narrow", "Avenir Next Condensed", sans-serif;
+  font-size: 2rem;
+  letter-spacing: -0.03em;
+}
+
+.overview-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.cta-panel {
+  display: grid;
+  gap: 14px;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top right, rgba(32, 150, 255, 0.18), transparent 18rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+}
+
+.cta-panel h2 {
+  margin: 0;
+  font-family: "Arial Narrow", "Avenir Next Condensed", sans-serif;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  line-height: 0.98;
+}
+
+.cta-panel p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 52rem;
+}
+
+.cta-actions {
+  margin-top: 4px;
+}
+
+.prose-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.prose-block {
+  padding: 18px;
+  border-radius: 16px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+
+.prose-block h3 {
+  margin: 0 0 10px;
+  font-family: "Arial Narrow", "Avenir Next Condensed", sans-serif;
+  font-size: 1.22rem;
+}
+
+.prose-block p,
+.prose-block li,
+.prose-block strong {
+  color: var(--text);
+}
+
+.prose-block p,
+.prose-block ul {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.prose-block ul {
+  padding-left: 18px;
+}
+
+.compact-intro {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+}
+
+.intro-ticks {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.market-toolbar {
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: end;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.filters label {
+  display: grid;
+  gap: 8px;
+  min-width: 180px;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+select,
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--text);
+  outline: 0;
+}
+
+.empty-state {
+  padding: 30px;
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.duel-layout {
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.92fr);
+  align-items: start;
+}
+
+.matchup-hero h1,
+.agent-hero h1 {
+  margin: 10px 0 8px;
+  font-family: "Arial Narrow", "Avenir Next Condensed", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.detail-bots {
+  align-items: stretch;
+}
+
+.bot-panel {
+  flex: 1;
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+
+.vs-marker {
+  align-self: center;
+  color: var(--muted-2);
+  letter-spacing: 0.16em;
+  font-size: 0.86rem;
+}
+
+.detail-section ul {
+  padding-left: 18px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.action-panel {
+  position: sticky;
+  top: 110px;
+}
+
+.action-state {
+  margin-top: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.choice-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+}
+
+.choice-button.selected {
+  border-color: rgba(32, 150, 255, 0.3);
+  background: rgba(32, 150, 255, 0.12);
+}
+
+.action-summary {
+  flex-direction: column;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.summary-line,
+.position-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.agent-hero {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  padding: 22px;
+}
+
+.agent-meta {
+  display: flex;
+  gap: 16px;
+}
+
+.summary-card strong {
+  display: block;
+  font-size: 1.7rem;
+  margin-top: 6px;
+}
+
+.portfolio-header {
+  display: grid;
+  gap: 18px;
+}
+
+.positions-grid {
+  grid-template-columns: 1fr;
+}
+
+.position-row {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.position-row:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.tabs {
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.tab {
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.tab.active {
+  background: var(--accent-soft);
+  color: #d5ebff;
+}
+
+@media (max-width: 1120px) {
+  .topbar-main,
+  .market-toolbar,
+  .compact-intro,
+  .market-overview,
+  .hero,
+  .duel-layout,
+  .agent-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar-main {
+    display: grid;
+  }
+
+  .topbar-actions {
+    margin-left: 0;
+    justify-content: space-between;
+  }
+
+  .intro-ticks {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 760px) {
+  .shell {
+    width: min(100% - 20px, 1380px);
+  }
+
+  .nav {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 2px;
+  }
+
+  .duel-bots,
+  .trade-actions,
+  .detail-bots,
+  .card-matchup,
+  .hero-actions,
+  .section-head,
+  .position-row,
+  .agent-meta {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .activity-list,
+  .portfolio-card,
+  .detail-section,
+  .action-panel,
+  .page-intro,
+  .hero,
+  .duel-card,
+  .agent-card,
+  .matchup-hero {
+    padding: 16px;
+  }
+
+  .hero-copy h1,
+  .page-intro h1,
+  .matchup-hero h1,
+  .agent-hero h1 {
+    font-size: 2rem;
+  }
+}
