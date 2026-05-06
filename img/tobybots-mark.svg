@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">TobyBots mark</title>
+  <desc id="desc">Abstract modular T-shaped icon in orange, mint, and ivory.</desc>
+  <defs>
+    <linearGradient id="mint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b8eadc"/>
+      <stop offset="100%" stop-color="#84d9c7"/>
+    </linearGradient>
+  </defs>
+  <path d="M12 14C12 8.477 16.477 4 22 4H31V24H12V14Z" fill="#FF6A1A"/>
+  <path d="M33 4H42C47.523 4 52 8.477 52 14V24H33V4Z" fill="#F2EFE6"/>
+  <path d="M18 26H33V38C33 41.314 35.686 44 39 44H44V60H28C22.477 60 18 55.523 18 50V26Z" fill="url(#mint)"/>
+  <circle cx="46" cy="34" r="6" fill="#FF6A1A"/>
+</svg>
